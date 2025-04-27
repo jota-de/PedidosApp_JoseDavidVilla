@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace solid_pattern
 {
-    public class EstrategiaEntrega : IMetodoentrega
+    public class EntregaDron : IMetodoentrega
     {
         public double CalcularCosto(int km) => km * 20;
         public string TipoEntrega() => "Dron";
@@ -19,6 +19,5 @@ namespace solid_pattern
     {
         public double CalcularCosto(int km) => km * 5;
         public string TipoEntrega() => "Camion";
-    }
-   
+    }   
 }
