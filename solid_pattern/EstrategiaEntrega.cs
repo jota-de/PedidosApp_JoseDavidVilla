@@ -19,5 +19,12 @@ namespace solid_pattern
     {
         public double CalcularCosto(int km) => km * 5;
         public string TipoEntrega() => "Camion";
-    }   
-}
+    }
+
+    public class EntregaBicicleta : IMetodoentrega
+    {
+        public double CalcularCosto(int kn) => kn * 3;
+        public string TipoEntrega() => "Bicicleta";
+    }
+
+    }

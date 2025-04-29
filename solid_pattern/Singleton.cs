@@ -30,5 +30,9 @@ namespace solid_pattern
         {
             Pedidos.Add(pedido);
         }
+        public List<Pedido> MostrarPedidos()
+        {
+            return Pedidos;
+        }
     }
 }
