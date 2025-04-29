@@ -25,7 +25,14 @@ namespace solid_pattern
             cmbProducto.Items.Add("Componente");
             cmbProducto.SelectedIndex = 0;
             #endregion
-           
+            #region [Combo entrega]
+            cmbEntrega.Items.Add("--");
+            cmbEntrega.Items.Add("Dron");
+            cmbEntrega.Items.Add("Moto");
+            cmbEntrega.Items.Add("Camion");
+            cmbEntrega.Items.Add("Bicicleta");
+            cmbEntrega.SelectedIndex = 0;
+            #endregion
 
         }
 
@@ -40,7 +47,7 @@ namespace solid_pattern
                 int distancia = Convert.ToInt32(nudDistancia.Value);
                 Pedido pedido = new Pedido(cliente, producto, urgente, peso, distancia);
                 Singleton.Instancia.AgregarPedido(pedido);
-                
+                string entrega = cmbEntrega.SelectedItem.ToString();
                               
                 lblResultado.Text = $"Entrega: {pedido.MetodoEntrega.TipoEntrega()}" + $"  Costo: ${pedido.ObtenerCosto():0.00}";
 
@@ -66,5 +73,25 @@ namespace solid_pattern
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string entrega = cmbEntrega.SelectedItem.ToString();
+            var pedidos_filtrado = Singleton.Instancia.MostrarPedidos()
+                   .Where(p => p.MetodoEntrega.TipoEntrega() == entrega)
+                   .OrderByDescending(p => p.Peso)
+                   .Select((p, Index) => new
+                   {
+                       Nro = Index + 1,
+                       Cliente = p.Cliente,
+                       Producto = p.Producto,
+                       Urgente = p.Urgente ? "Si" : "No",
+                       Peso = p.Peso,
+                       Distancia = p.Distancia,
+                       Entrega = p.MetodoEntrega.TipoEntrega(),
+                       Costo = p.ObtenerCosto()
+                   }).ToList();
+            dgvPedidos.DataSource = null;
+            dgvPedidos.DataSource = pedidos_filtrado;
+        }
     }
 }
