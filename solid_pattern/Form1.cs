@@ -25,14 +25,7 @@ namespace solid_pattern
             cmbProducto.Items.Add("Componente");
             cmbProducto.SelectedIndex = 0;
             #endregion
-            #region [Combo entrega]
-            cmbEntrega.Items.Add("--");
-            cmbEntrega.Items.Add("Dron");
-            cmbEntrega.Items.Add("Moto");
-            cmbEntrega.Items.Add("Camion");
-            cmbEntrega.Items.Add("Bicicleta");
-            cmbEntrega.SelectedIndex = 0;
-            #endregion
+           
 
         }
 
