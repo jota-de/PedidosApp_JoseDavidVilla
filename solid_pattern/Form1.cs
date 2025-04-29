@@ -54,6 +54,7 @@ namespace solid_pattern
                         Urgente = p.Urgente ? "Si" : "No",
                         Peso = p.Peso,
                         Distancia = p.Distancia,
+                        Entrega = p.MetodoEntrega.TipoEntrega(),
                         Costo = p.ObtenerCosto()
                     }).ToList();
                 dgvPedidos.DataSource = null;
