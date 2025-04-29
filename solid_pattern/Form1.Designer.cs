@@ -40,8 +40,6 @@
             this.labelPeso = new System.Windows.Forms.Label();
             this.labelDistancia = new System.Windows.Forms.Label();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
-            this.cmbEntrega = new System.Windows.Forms.ComboBox();
-            this.labelEntrega = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudPeso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDistancia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
@@ -49,7 +47,7 @@
             // 
             // txtCliente
             // 
-            this.txtCliente.Location = new System.Drawing.Point(117, 62);
+            this.txtCliente.Location = new System.Drawing.Point(73, 62);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(100, 20);
             this.txtCliente.TabIndex = 0;
@@ -57,7 +55,7 @@
             // cmbProducto
             // 
             this.cmbProducto.FormattingEnabled = true;
-            this.cmbProducto.Location = new System.Drawing.Point(117, 89);
+            this.cmbProducto.Location = new System.Drawing.Point(73, 89);
             this.cmbProducto.Name = "cmbProducto";
             this.cmbProducto.Size = new System.Drawing.Size(121, 21);
             this.cmbProducto.TabIndex = 1;
@@ -65,7 +63,7 @@
             // chkUrgente
             // 
             this.chkUrgente.AutoSize = true;
-            this.chkUrgente.Location = new System.Drawing.Point(117, 128);
+            this.chkUrgente.Location = new System.Drawing.Point(73, 128);
             this.chkUrgente.Name = "chkUrgente";
             this.chkUrgente.Size = new System.Drawing.Size(76, 17);
             this.chkUrgente.TabIndex = 2;
@@ -74,21 +72,21 @@
             // 
             // nudPeso
             // 
-            this.nudPeso.Location = new System.Drawing.Point(118, 192);
+            this.nudPeso.Location = new System.Drawing.Point(73, 156);
             this.nudPeso.Name = "nudPeso";
             this.nudPeso.Size = new System.Drawing.Size(120, 20);
             this.nudPeso.TabIndex = 3;
             // 
             // nudDistancia
             // 
-            this.nudDistancia.Location = new System.Drawing.Point(118, 218);
+            this.nudDistancia.Location = new System.Drawing.Point(73, 182);
             this.nudDistancia.Name = "nudDistancia";
             this.nudDistancia.Size = new System.Drawing.Size(120, 20);
             this.nudDistancia.TabIndex = 4;
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(76, 248);
+            this.btnCalcular.Location = new System.Drawing.Point(74, 212);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(75, 23);
             this.btnCalcular.TabIndex = 5;
@@ -99,16 +97,17 @@
             // lblResultado
             // 
             this.lblResultado.AutoSize = true;
-            this.lblResultado.Location = new System.Drawing.Point(183, 253);
+            this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultado.Location = new System.Drawing.Point(26, 257);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(35, 13);
+            this.lblResultado.Size = new System.Drawing.Size(14, 20);
             this.lblResultado.TabIndex = 6;
-            this.lblResultado.Text = "label1";
+            this.lblResultado.Text = "-";
             // 
             // labelCliente
             // 
             this.labelCliente.AutoSize = true;
-            this.labelCliente.Location = new System.Drawing.Point(54, 68);
+            this.labelCliente.Location = new System.Drawing.Point(10, 68);
             this.labelCliente.Name = "labelCliente";
             this.labelCliente.Size = new System.Drawing.Size(39, 13);
             this.labelCliente.TabIndex = 7;
@@ -117,7 +116,7 @@
             // labelProducto
             // 
             this.labelProducto.AutoSize = true;
-            this.labelProducto.Location = new System.Drawing.Point(54, 97);
+            this.labelProducto.Location = new System.Drawing.Point(10, 97);
             this.labelProducto.Name = "labelProducto";
             this.labelProducto.Size = new System.Drawing.Size(50, 13);
             this.labelProducto.TabIndex = 8;
@@ -126,7 +125,7 @@
             // labelPeso
             // 
             this.labelPeso.AutoSize = true;
-            this.labelPeso.Location = new System.Drawing.Point(55, 199);
+            this.labelPeso.Location = new System.Drawing.Point(10, 163);
             this.labelPeso.Name = "labelPeso";
             this.labelPeso.Size = new System.Drawing.Size(31, 13);
             this.labelPeso.TabIndex = 10;
@@ -135,7 +134,7 @@
             // labelDistancia
             // 
             this.labelDistancia.AutoSize = true;
-            this.labelDistancia.Location = new System.Drawing.Point(55, 225);
+            this.labelDistancia.Location = new System.Drawing.Point(10, 189);
             this.labelDistancia.Name = "labelDistancia";
             this.labelDistancia.Size = new System.Drawing.Size(51, 13);
             this.labelDistancia.TabIndex = 11;
@@ -144,36 +143,17 @@
             // dgvPedidos
             // 
             this.dgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPedidos.Location = new System.Drawing.Point(311, 62);
+            this.dgvPedidos.Location = new System.Drawing.Point(200, 43);
             this.dgvPedidos.Name = "dgvPedidos";
             this.dgvPedidos.RowHeadersVisible = false;
-            this.dgvPedidos.Size = new System.Drawing.Size(240, 150);
+            this.dgvPedidos.Size = new System.Drawing.Size(348, 159);
             this.dgvPedidos.TabIndex = 12;
-            // 
-            // cmbEntrega
-            // 
-            this.cmbEntrega.FormattingEnabled = true;
-            this.cmbEntrega.Location = new System.Drawing.Point(117, 161);
-            this.cmbEntrega.Name = "cmbEntrega";
-            this.cmbEntrega.Size = new System.Drawing.Size(121, 21);
-            this.cmbEntrega.TabIndex = 13;
-            // 
-            // labelEntrega
-            // 
-            this.labelEntrega.AutoSize = true;
-            this.labelEntrega.Location = new System.Drawing.Point(44, 169);
-            this.labelEntrega.Name = "labelEntrega";
-            this.labelEntrega.Size = new System.Drawing.Size(67, 13);
-            this.labelEntrega.TabIndex = 14;
-            this.labelEntrega.Text = "Tipo entrega";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 298);
-            this.Controls.Add(this.labelEntrega);
-            this.Controls.Add(this.cmbEntrega);
+            this.ClientSize = new System.Drawing.Size(560, 307);
             this.Controls.Add(this.dgvPedidos);
             this.Controls.Add(this.labelDistancia);
             this.Controls.Add(this.labelPeso);
@@ -211,8 +191,6 @@
         private System.Windows.Forms.Label labelPeso;
         private System.Windows.Forms.Label labelDistancia;
         private System.Windows.Forms.DataGridView dgvPedidos;
-        private System.Windows.Forms.ComboBox cmbEntrega;
-        private System.Windows.Forms.Label labelEntrega;
     }
 }
 

@@ -43,14 +43,13 @@ namespace solid_pattern
                 string cliente = txtCliente.Text;
                 string producto = cmbProducto.SelectedItem.ToString();
                 bool urgente = chkUrgente.Checked;
-                string entrega = cmbEntrega.SelectedItem.ToString();
                 double peso = Convert.ToDouble(nudPeso.Value);
                 int distancia = Convert.ToInt32(nudDistancia.Value);
                 Pedido pedido = new Pedido(cliente, producto, urgente, peso, distancia);
                 Singleton.Instancia.AgregarPedido(pedido);
                 
                               
-                lblResultado.Text = $"Entrega: {pedido.MetodoEntrega.TipoEntrega()}" + $"Costo: ${pedido.ObtenerCosto():0.00}";
+                lblResultado.Text = $"Entrega: {pedido.MetodoEntrega.TipoEntrega()}" + $"  Costo: ${pedido.ObtenerCosto():0.00}";
 
                 var pedidos = Singleton.Instancia.MostrarPedidos()
                     .OrderByDescending(p => p.Peso)
