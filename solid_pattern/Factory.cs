@@ -16,7 +16,7 @@ namespace solid_pattern
                 return new EntregaMoto();
             else if (tipoProducto == "componente" || peso > 10)
                 return new EntregaCamion();
-            else if (tipoProducto == "Accesorio" && peso > 2 && urgente)
+            else if (tipoProducto == "Accesorio" && peso < 2 && !urgente)
                 return new EntregaBicicleta();
             else
                 return new EntregaMoto(); // valor por defecto
