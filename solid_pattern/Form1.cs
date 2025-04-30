@@ -72,7 +72,7 @@ namespace solid_pattern
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             string entrega = cmbEntrega.SelectedItem.ToString();
